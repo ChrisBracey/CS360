@@ -9,10 +9,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 
 
-public class ex14_10 extends Application{
+public class ex14_10 extends Application
+{
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage primaryStage) throws Exception 
+	{
 		Pane pane = new Pane();
 		Arc arc = new Arc();
 		arc.setRadiusX(100.0f);
@@ -82,7 +84,8 @@ public class ex14_10 extends Application{
 		primaryStage.show();
 	}
 	
-	public static void main(String[] args){
+	public static void main(String[] args)
+	{
 		launch(args);
 	}
 	

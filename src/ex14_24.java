@@ -12,7 +12,8 @@ import javafx.scene.layout.StackPane;
 import javafx.geometry.Pos;
 
 
-public class ex14_24 extends Application{
+public class ex14_24 extends Application
+{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception 

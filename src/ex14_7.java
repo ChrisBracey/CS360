@@ -8,7 +8,8 @@ import javafx.scene.control.TextField;
 
 
 
-public class ex14_7 extends Application{
+public class ex14_7 extends Application
+{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception 
