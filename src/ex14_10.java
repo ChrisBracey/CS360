@@ -15,6 +15,7 @@ public class ex14_10 extends Application
 	@Override
 	public void start(Stage primaryStage) throws Exception 
 	{
+		//Creates top arc
 		Pane pane = new Pane();
 		Arc arc = new Arc();
 		arc.setRadiusX(100.0f);
@@ -26,6 +27,7 @@ public class ex14_10 extends Application
 		arc.setCenterY(50.0f);
 		arc.centerXProperty().bind(pane.widthProperty().divide(2));
 
+		//Creates second arc
 		Arc arc2 = new Arc();
 		arc2.setRadiusX(100.0f);
 		arc2.setRadiusY(50.0f);
@@ -36,6 +38,7 @@ public class ex14_10 extends Application
 		arc2.setCenterY(50.0f);
 		arc2.centerXProperty().bind(pane.widthProperty().divide(2));
 
+		//Creates left line
 		Line line = new Line();
 		line.setStartX(150.0f);
 		line.setStartY(50.0f);
@@ -46,6 +49,7 @@ public class ex14_10 extends Application
 		line.startXProperty().bind(pane.widthProperty().divide(2).subtract(100));
 		line.endXProperty().bind(pane.widthProperty().divide(2).subtract(100));
 
+		//Creates right line
 		Line line2 = new Line();
 		line2.setStartX(350.0f);
 		line2.setStartY(50.0f);
@@ -56,6 +60,7 @@ public class ex14_10 extends Application
 		line2.startXProperty().bind(pane.widthProperty().divide(2).add(100));
 		line2.endXProperty().bind(pane.widthProperty().divide(2).add(100));
 
+		//Creates dashed arc
 		Arc arc3 = new Arc();
 		arc3.setRadiusX(100.0f);
 		arc3.setRadiusY(50.0f);
@@ -67,6 +72,7 @@ public class ex14_10 extends Application
 		arc3.centerXProperty().bind(pane.widthProperty().divide(2));
 		arc3.getStrokeDashArray().addAll(6.0, 21.0);
 
+		//Creates bottom arc
 		Arc arc4 = new Arc();
 		arc4.setRadiusX(100.0f);
 		arc4.setRadiusY(50.0f);
@@ -77,6 +83,7 @@ public class ex14_10 extends Application
 		arc4.setCenterY(200.0f);
 		arc4.centerXProperty().bind(pane.widthProperty().divide(2));
 
+		//Add Everything to the pane
 		pane.getChildren().addAll(arc, arc2, line, line2, arc3, arc4);
 
 		Scene scene = new Scene(pane,500,500);
