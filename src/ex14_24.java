@@ -27,6 +27,8 @@ public class ex14_24 extends Application
 
 		System.out.println("Enter five points: ");
 		Scanner console = new Scanner(System.in);
+
+		//Get points for the polygon
 		for(int i = 0; i< 8; ++i)
 		{
 			points.add(console.nextDouble());
@@ -35,9 +37,11 @@ public class ex14_24 extends Application
 		double pointX = 0;
 		double pointY = 0;
 
+		//Get the point to be tested
 		pointX = console.nextDouble();
 		pointY = console.nextDouble();
 
+		//Draw a circle on that point
 		Circle circle = new Circle();
 		circle.setRadius(5);
 		circle.setCenterX(pointX);
@@ -46,6 +50,7 @@ public class ex14_24 extends Application
 
 		Label label;
 
+		//Check if the polygon contains the point
 		if(polygon.contains(pointX, pointY))
 		{
 			label = new Label("The point is contained by the polygon");
@@ -55,10 +60,10 @@ public class ex14_24 extends Application
 			label = new Label("The point is not contained by the polygon");
 		}
 
+		//Center label
 		StackPane.setAlignment(label, Pos.BOTTOM_CENTER);
 
 		pane.getChildren().add(circle);
-
 		pane.getChildren().add(label);
 
 		Scene scene = new Scene(pane, 500, 500);

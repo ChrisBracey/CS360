@@ -17,8 +17,10 @@ public class ex14_7 extends Application
 		Pane vbox = new VBox();
 		for(int i = 0; i<10; ++i)
 		{	
+			//Create an hbox to hold the rows
 			Pane hbox = new HBox();
 			
+			//Add a random 0 or 1 to textFields and and them to the hBox
 			for(int j = 0; j<10; ++j)
 			{
 				int rand = (int)(Math.random() * 2);
@@ -28,6 +30,7 @@ public class ex14_7 extends Application
 				hbox.getChildren().add(tf);
 			}
 
+			//Add hbox to the vbox
 			vbox.getChildren().add(hbox);
 		}
 

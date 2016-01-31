@@ -18,24 +18,24 @@ public class ex14_3 extends Application
     	public void start(Stage primaryStage) throws Exception 
     	{
 
+    		//Added 52 integers to array
     		for(int i = 1; i<=52; ++i)
 	    		arr.add(i);
 
-
+	    	//Shuffle the Array
 	    	Collections.shuffle(arr);
 
-	    	System.out.println(arr.get(0));
-	    	System.out.println(arr.get(1));
-	    	System.out.println(arr.get(2));
-
+	    	//Create three image objects
 	    	Image card1 = new Image("images/card/" + arr.get(0) +".png");
 	    	Image card2 = new Image("images/card/" + arr.get(1) +".png");
 	    	Image card3 = new Image("images/card/" + arr.get(2) +".png");
 
+	    	//Add images to imageView objects
 	    	ImageView card1View = new ImageView(card1);
 	    	ImageView card2View = new ImageView(card2);
 	    	ImageView card3View = new ImageView(card3);
 
+	    	//Add them to the pane
 	    	Pane pane = new HBox();
 	    	pane.getChildren().add(card1View);
 	    	pane.getChildren().add(card2View);

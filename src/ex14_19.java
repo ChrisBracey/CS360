@@ -16,21 +16,26 @@ public class ex14_19 extends Application
 	{
 		Polyline polyline = new Polyline();
 		Polyline polyline2 = new Polyline();
+		//Create list for the sin line
 		ObservableList<Double> list = polyline.getPoints();
+		//Create list for the cos line
 		ObservableList<Double> list2 = polyline2.getPoints();
-		double scaleFactor = 50;
+		
+		//Add points to the sin line
 		for (int x = -170; x <= 170; x++) 
 		{
 			list.add(x + 200.0);
 			list.add(100 - 50 * Math.sin((x / 100.0) * 2 * Math.PI));
 		}
 
+		//Add points to the cos line
 		for (int x = -170; x <= 170; x++) 
 		{
 			list2.add(x + 200.0);
 			list2.add(100 - 50 * Math.cos((x / 100.0) * 2 * Math.PI));
 		}
 
+		//Create grid lines and their arrowheads
 		Line line = new Line();
 		line.setStartX(200.0f);
 		line.setStartY(25.0f);
@@ -92,6 +97,8 @@ public class ex14_19 extends Application
 		rightArrowRight.setEndX(390.0f);
 		rightArrowRight.setEndY(105.0f);
 
+
+		//Add everything to the pane
 		Pane pane = new Pane();
 		pane.getChildren().addAll(polyline, polyline2, line, line2, topArrowLeft, 
 								  topArrowRight, bottomArrowLeft, bottomArrowRight, 
